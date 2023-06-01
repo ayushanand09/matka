@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
- 
-const Home = () => {
+import "../CSS/Responsive.css"
 
+const Home = () => {
   // Creatin use states for displaying/hiding buttons and animating the timer bar
   const [displayANK, setDisplayANK] = useState(false);
   const [hideExceptANK, setHideExceptANK] = useState(true);
@@ -91,7 +91,7 @@ const Home = () => {
             </div>
           </>
         )}
-        
+
         <div className="cards">
           <div id="card-1">
             <img
@@ -139,9 +139,7 @@ const Home = () => {
         <div className="timer-bar-container">
           <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
         </div>
-        <span id="txt">
-          Place your bets
-        </span>
+        <span id="txt">Place your bets</span>
 
         <div className="buttons">
           <div className="ANK">
@@ -150,11 +148,6 @@ const Home = () => {
               onClick={() => {
                 showANK();
                 hideANKBtns();
-              }}
-              style={{
-                paddingRight: "1.7rem",
-                paddingLeft: "1.7rem",
-                backgroundColor: "red",
               }}
             >
               ANK
@@ -168,7 +161,7 @@ const Home = () => {
                 <button>5</button>
                 <br></br>
                 <button
-                className="backANK"
+                  className="backANK"
                   onClick={() => {
                     hideANK();
                     showANKBtns();
@@ -195,18 +188,18 @@ const Home = () => {
                     showSPBtns();
                     showToken();
                   }}
-                  style={{
-                    paddingRight: "1.7rem",
-                    paddingLeft: "1.7rem",
-                    backgroundColor: "red",
-                  }}
+                  // style={{
+                  //   paddingRight: "1.7rem",
+                  //   paddingLeft: "1.7rem",
+                  //   backgroundColor: "red",
+                  // }}
                 >
                   SP
                 </button>
                 {displaySP && (
                   <>
                     <button
-                    className="backSP"
+                      className="backSP"
                       onClick={() => {
                         hideSP();
                         hideSPBtns();

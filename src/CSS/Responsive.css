@@ -1,0 +1,902 @@
+@media screen and (max-width: 1500px) {
+    .timer-bar-container {
+        margin-top: 26%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .timer-bar-container {
+        margin-top: 26%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+}
+
+@media screen and (max-width: 1309px) {
+    #txt{
+        padding: 1rem;
+        margin-top: -1.4rem;
+        margin-left: 28rem;
+        margin-left: 10rem;
+        font-size: 1.3rem;
+    }
+    .timer-bar-container {
+        border-radius: 2rem;
+        width: 30%;
+        height: 10px;
+        margin-top: 20%;
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .timer-bar-container {
+        border-radius: 2rem;
+        width: 30%;
+        height: 10px;
+        margin-top: 30%;
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .container h1{
+        font-size: 1.5rem;
+        width: 8.5rem;
+    }
+    #txt{
+        padding: 1rem;
+        margin-top: -1.4rem;
+        margin-left: 28rem;
+        margin-left: 10rem;
+        font-size: 1.25rem;
+    }
+    .timer-bar-container {
+        /* width: 30%; */
+        margin-top: 33%;
+    }
+    .token1{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token2{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token3{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token4{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token5{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token6{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+    .token7{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 5rem;
+      }
+      .cards {
+        font-size: 1.4rem;
+      }
+      img {
+        height: 2.3rem;
+        width: 2.3rem;
+      }
+}
+
+@media screen and (max-width: 1150px){
+    .timer-bar-container {
+        /* width: 30%; */
+        margin-top: 35%;
+    }
+    .token1{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token2{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token3{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token4{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token5{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token6{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+      }
+    .token7{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 5rem;
+    }
+    .ANK button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .SP button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .DP button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .TP button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .JODI button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .HSANGAM button {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+        margin-left: 3rem;
+    }
+    .FSANGAM button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .PATTI button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .buttons {
+        left: 28.5%;
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .timer-bar-container {
+        margin-top: 40%;
+    }
+    .tokens {
+        left: 25%;
+    }
+    .token1{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token2{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token3{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token4{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token5{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token6{
+        margin-right: 2rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token7{
+        margin-right: 2rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token1:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token2:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token3:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token4:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token5:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token6:hover {
+        transform: scale(1.2);
+        font-size: 1.6rem;
+    }
+    .token7:hover {
+        transform: scale(1.2);
+        font-size: 1.5rem;
+    }
+
+    .ANK button {
+        font-size: 0.8rem;
+        margin-left: 1rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .SP button {
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .TP button {
+        margin-left: -1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .JODI button {
+        margin-left: -1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .HSANGAM button {
+        margin-left: 2rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .FSANGAM button {
+        margin-left: 0rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .PATTI button {
+        margin-left: 0rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .cards {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+    } 
+    .buttons {
+        left: 27%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .buttons {
+        left: 25%;
+    } 
+    #txt{
+        margin-left: 6rem;
+        font-size: 1.2rem;
+    }    
+}
+
+@media screen and (max-width: 930px){   
+    .timer-bar-container{
+        margin-left: 35%;
+    }
+    #txt{
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+    .buttons {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .timer-bar-container{
+        margin-top: 45%;
+    }
+    .buttons {
+        left: 17%;
+    }
+    .tokens {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 812px){
+    .timer-bar-container{
+        margin-top: 50%;
+    }
+    .buttons {
+        left: 13%;
+    }
+    .tokens {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .container h1{
+        font-size: 1.2rem;
+        width: 7rem;
+    }
+    .buttons {
+        left: 11%;
+    }
+    .tokens {
+        left: 12%;
+    }
+    .cards {
+        font-size: 1rem;
+    }
+    img{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .buttons {
+        left: 9%;
+    }
+    .tokens {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .buttons {
+        left: 5%;
+    }
+    .tokens {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .timer-bar-container{
+        margin-top: 60%;
+    }
+    .ANK button {
+        font-size: 0.8rem;
+        /* margin-left: 1rem; */
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .SP button {
+        margin-left: 0rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .TP button {
+        margin-left: -2rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .DP button {
+        margin-left: -1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .JODI button {
+        margin-left: -2rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .HSANGAM button {
+        margin-left: 2rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .FSANGAM button {
+        margin-left: -1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .PATTI button {
+        margin-left: -1rem;
+        font-size: 0.8rem;
+        padding-top: 0.4rem;
+        padding-right: 1.3rem;
+        padding-left: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    .token1{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token2{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token3{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token4{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token5{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token6{
+        margin-right: 1.5rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+      }
+    .token7{
+        margin-right: 1.5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token1:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token2:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token3:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token4:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token5:hover {
+        transform: scale(1.2);
+        font-size: 2rem;
+    }
+    .token6:hover {
+        transform: scale(1.2);
+        font-size: 1.6rem;
+    }
+    .token7:hover {
+        transform: scale(1.2);
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .timer-bar-container{
+        margin-top: 67%;
+        margin-left: 30%;
+    }
+    #txt{
+        margin-left: -2.5rem;
+        font-size: 1rem;
+    }
+    .buttons {
+        left: 2%;
+    }
+    .tokens {
+        left: 7%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .cards {
+        padding: 0.5rem;
+        font-size: 1rem;
+    } 
+    img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .tokens{
+        display:flex;
+        flex-wrap: wrap;
+        top: -5%;
+    }
+    .timer-bar-container{
+        margin-top: 60%;
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .token1{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token2{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token3{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token4{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token5{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token6{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token7{
+        margin-right: 1rem;
+        height: 3.3rem;
+        width: 3.3rem;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+    }
+    .token1:hover {
+        transform: scale(1.1);
+        font-size: 1.8rem;
+    }
+    .token2:hover {
+        transform: scale(1.1);
+        font-size: 1.8rem;
+    }
+    .token3:hover {
+        transform: scale(1.1);
+        font-size: 1.8rem;
+    }
+    .token4:hover {
+        transform: scale(1.1);
+        font-size: 1.8rem;
+    }
+    .token5:hover {
+        transform: scale(1.1);
+        font-size: 1.8rem;
+    }
+    .token6:hover {
+        transform: scale(1.1);
+        font-size: 1.6rem;
+    }
+    .token7:hover {
+        transform: scale(1.1);
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .token1{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token2{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token3{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token4{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token5{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token6{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token7{
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .timer-bar-container{
+        margin-top: 70%;
+    }
+    .ANK .btn1{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        background-color: red;
+    }
+
+    .ANK button {
+        /* margin-left: 1rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .SP button {
+        /* margin-left: 0rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .SP .btn2{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }        
+    .TP button {
+        /* margin-left: -2rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .DP button {
+        /* margin-left: -1rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .JODI button {
+        /* margin-left: -2rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .HSANGAM button {
+        /* margin-left: 2rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .FSANGAM button {
+        /* margin-left: -1rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+    .PATTI button {
+        /* margin-left: -1rem; */
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #txt{
+        margin-top:-1rem;
+        margin-left: -2.5rem;
+        font-size: 0.8rem;
+    }
+    .cards{
+        padding: 0.3rem;
+        font-size: 0.7rem;
+    }
+    img{
+        height: 1rem;
+        width: 1rem;
+    }
+    .timer-bar-container{
+        margin-top: 80%;
+    }
+}
+
+@media screen and (max-width:415px) {
+    .token1{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token2{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token3{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token4{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token5{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token6{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+    .token7{
+        margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5rem;
+        font-size: 1.3rem;
+    }
+}
