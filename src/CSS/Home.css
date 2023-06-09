@@ -82,103 +82,81 @@ body {
   position: absolute;
 }
 
-.token1 {
-  background-color: grey;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
+.token1{
+  background-image: url("../../public/UI/Chips/chip_1.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
 }
-
+.token2{
+  background-image: url("../../public/UI/Chips/chip_5.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token3{
+  background-image: url("../../public/UI/Chips/chip_10.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.toke4{
+  background-image: url("../../public/UI/Chips/chip_20.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token5{
+  background-image: url("../../public/UI/Chips/chip_50.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token6{
+  background-image: url("../../public/UI/Chips/chip_100.png");
+  height: 6.5rem;
+  width: 6.8rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token7{
+  background-image: url("../../public/UI/Chips/chip_250.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+}
 .token1:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token2 {
-  background-color: red;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token2:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token3 {
-  background-color: orange;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token3:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token4 {
-  background-color: green;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token4:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token5 {
-  background-color: yellow;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token5:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token6 {
-  background-color: purple;
-  color: white;
-  margin-right: 3rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token6:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
-}
-.token7 {
-  background-color: black;
-  color: white;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 5rem;
-  font-size: 2rem;
 }
 .token7:hover {
   transition: all 0.2s;
   transform: scale(1.2);
-  font-size: 2.3rem;
 }
 .cards {
   background-color: black;
@@ -193,8 +171,8 @@ body {
 
 img {
   display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 1.8rem;
 }
 
 .buttons {

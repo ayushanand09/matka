@@ -81,13 +81,21 @@ const Home = () => {
         {displayToken && (
           <>
             <div className="tokens">
-              <button className="token1"> 1 </button>
+              {/* <button className="token1"> 1 </button>
               <button className="token2"> 5 </button>
               <button className="token3"> 10 </button>
               <button className="token4"> 20 </button>
               <button className="token5"> 50 </button>
               <button className="token6"> 100 </button>
-              <button className="token7"> 250 </button>
+              <button className="token7"> 250 </button> */}
+              <br></br>
+              <button className="token1"></button>
+              <button className="token2"></button>
+              <button className="token3"></button>
+              <button className="token4"></button>
+              <button className="token5"></button>
+              <button className="token6"></button>
+              <button className="token7"></button>
             </div>
           </>
         )}
@@ -95,44 +103,41 @@ const Home = () => {
         <div className="cards">
           <div id="card-1">
             <img
-              className="img1"
-              src={require("./queen.png")}
+              src={require("./Cards/card_spades_10.png")}
               alt="Not displaying image1"
             />
             <img
-              className="img1"
-              src={require("./queen.png")}
+              src={require("./Cards/card_hearts_09.png")}
               alt="Not displaying image2"
             />
             <img
-              className="img1"
-              src={require("./queen.png")}
+              src={require("./Cards/card_spades_A.png")}
               alt="Not displaying image3"
             />
             190-0
           </div>
           <div id="card-2">
-            <img src={require("./queen.png")} alt="Not displaying image4" />
-            <img src={require("./queen.png")} alt="Not displaying image5" />
-            <img src={require("./queen.png")} alt="Not displaying image6" />
+            <img src={require("./Cards/card_spades_06.png")} alt="Not displaying image4" />
+            <img src={require("./Cards/card_hearts_03.png")} alt="Not displaying image5" />
+            <img src={require("./Cards/card_hearts_06.png")} alt="Not displaying image6" />
             366-5
           </div>
           <div id="card-3">
-            <img src={require("./queen.png")} alt="Not displaying image7" />
-            <img src={require("./queen.png")} alt="Not displaying image8" />
-            <img src={require("./queen.png")} alt="Not displaying image9" />
+            <img src={require("./Cards/card_hearts_09.png")} alt="Not displaying image7" />
+            <img src={require("./Cards/card_clubs_04.png")} alt="Not displaying image8" />
+            <img src={require("./Cards/card_hearts_A.png")} alt="Not displaying image9" />
             149-4
           </div>
           <div id="card-4">
-            <img src={require("./queen.png")} alt="Not displaying image" />
-            <img src={require("./queen.png")} alt="Not displaying image" />
-            <img src={require("./queen.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_spades_06.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_clubs_03.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_diamonds_10.png")} alt="Not displaying image" />
             360-9
           </div>
           <div id="card-5">
-            <img src={require("./queen.png")} alt="Not displaying image" />
-            <img src={require("./queen.png")} alt="Not displaying image" />
-            <img src={require("./queen.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_hearts_02.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_spades_05.png")} alt="Not displaying image" />
+            <img src={require("./Cards/card_hearts_02.png")} alt="Not displaying image" />
             235-0
           </div>
         </div>
