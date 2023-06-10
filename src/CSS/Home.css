@@ -202,15 +202,15 @@ img {
 }
 
 .ANK .btn1{
-    padding-right: 1.7rem;
-    padding-left: 1.7rem;
-    background-color: red;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  background-color: red;
 }
 
 .backANK {
     color: white;
-    /* background-color: blue;
-    margin-top: 10px; */
+  /* background-color: blue;
+  margin-top: 10px; */
 }
 
 .btn1 {
@@ -230,13 +230,14 @@ img {
 }
 
 .SP .btn2{
-    padding-right: 1.7rem;
-    padding-left: 1.7rem;
-    background-color: red;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  background-color: red;
 }
 .backSP {
   color: white;
 }
+
 .SP button {
   font-size: 1rem;
   margin-right: 1rem;
@@ -295,8 +296,8 @@ img {
   margin-top: 5px;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .SP1-options-set1 button {
@@ -316,8 +317,8 @@ img {
   border-bottom-left-radius: 0.5rem;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .SP1-options-set2 button {
@@ -348,8 +349,8 @@ img {
   margin-top: 5px;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .SP2-options-set1 button {
@@ -369,8 +370,8 @@ img {
   border-bottom-left-radius: 0.5rem;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .SP2-options-set2 button {
