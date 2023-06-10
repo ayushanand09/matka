@@ -11,7 +11,6 @@ body {
 
 .container {
   background-image: url("../Components/background.jpg");
-  /* background-image: url("https://carvilla.in/wp-content/uploads/2023/03/online-casion-india-real-money_587871aed.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -69,16 +68,11 @@ body {
   }
 }
 
-/* .animate {
-        animation-play-state: running;
-    } */
-
 .tokens {
   display: inline-block;
   justify-content: center;
   margin-top: 20rem;
   left: 25%;
-  /* top: -25%; */
   position: absolute;
 }
 
@@ -261,7 +255,6 @@ img {
 
 #SP-btns {
   display: flex;
-  /* display: none; */
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -296,8 +289,6 @@ img {
   margin-top: 5px;
   padding: 5px;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .SP1-options-set1 button {
@@ -317,8 +308,6 @@ img {
   border-bottom-left-radius: 0.5rem;
   padding: 5px;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .SP1-options-set2 button {
@@ -349,8 +338,6 @@ img {
   margin-top: 5px;
   padding: 5px;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .SP2-options-set1 button {
@@ -370,8 +357,6 @@ img {
   border-bottom-left-radius: 0.5rem;
   padding: 5px;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .SP2-options-set2 button {
@@ -438,8 +423,6 @@ img {
   border-radius: 0.5rem;
 }
 .SP9 {
-  /* display: flex;
-  flex-wrap: wrap; */
   margin-top: 0.5rem;
   padding-left: 2rem;
   text-align: left;
@@ -556,8 +539,4 @@ img {
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
   background-color: red;
-}
-
-@media screen and (max-width: 321px) {
-  
 }

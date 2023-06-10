@@ -3,7 +3,6 @@ import "../CSS/Home.css";
 import "../CSS/Responsive.css"
 
 const Home = () => {
-  // Creatin use states for displaying/hiding buttons and animating the timer bar
   const [displayANK, setDisplayANK] = useState(false);
   const [hideExceptANK, setHideExceptANK] = useState(true);
   const [displaySP, setDisplaySP] = useState(false);
@@ -81,13 +80,7 @@ const Home = () => {
         {displayToken && (
           <>
             <div className="tokens">
-              {/* <button className="token1"> 1 </button>
-              <button className="token2"> 5 </button>
-              <button className="token3"> 10 </button>
-              <button className="token4"> 20 </button>
-              <button className="token5"> 50 </button>
-              <button className="token6"> 100 </button>
-              <button className="token7"> 250 </button> */}
+              
               <br></br>
               <button className="token1"></button>
               <button className="token2"></button>
