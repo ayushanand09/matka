@@ -103,7 +103,7 @@ body {
   border-radius: 4rem;
   margin-right: 2rem;
 }
-.toke4{
+.token4{
   background-image: url("../../public/UI/Chips/chip_20.png");
   height: 6.5rem;
   width: 6.5rem;
@@ -180,7 +180,7 @@ img {
   left: 30%;
   position: absolute;
   /* display: flex; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .ANK {
@@ -556,4 +556,8 @@ img {
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
   background-color: red;
+}
+
+@media screen and (max-width: 321px) {
+  
 }

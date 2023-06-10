@@ -65,6 +65,9 @@
         /* width: 30%; */
         margin-top: 33%;
     }
+    .tokens{
+        left: 20%
+    }
     .token1{
         transform: scale(0.85);
     }
@@ -97,26 +100,39 @@
 
 @media screen and (max-width: 1150px){
     .timer-bar-container {
-        /* width: 30%; */
         margin-top: 37%;
     }
+    .tokens{
+        left: 20%;
+    }
     .token1{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-right: 0rem;
+    }
+    .token2{
+        transform: scale(0.80);
+        margin-right: 0rem;
     }
     .token3{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-left: 0rem;
     }
     .token4{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-left: -2rem;
+        margin-right: 0rem;
     }
     .token5{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-right: 0rem;
     }
     .token6{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-right: 0rem;
     }
     .token7{
-        transform: scale(0.85);
+        transform: scale(0.80);
+        margin-right: 0rem;
     }
     .ANK button {
         font-size: 0.8rem;
@@ -298,7 +314,7 @@
 
 @media screen and (max-width: 1000px){
     .tokens {
-        left: 25%;
+        left: 18%;
     }
     .token1{
         transform: scale(0.70);
@@ -310,7 +326,7 @@
     }
     .token3{
         transform: scale(0.70);
-        margin-right: 0rem;
+        /* margin-right: 0rem; */
     }
     .token4{
         transform: scale(0.70);
@@ -436,7 +452,7 @@
         left: 17%;
     }
     .tokens {
-        left: 20%;
+        left: 12%;
     }
     .SP1-options-set1 button{
         font-size: 0.75rem;
@@ -469,27 +485,27 @@
     }
     .token1{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: -1rem;
     }
     .token2{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: -1rem;
     }
     .token3{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: 0.5rem;
     }
     .token4{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: -1.5rem;
     }
     .token5{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: -1.5rem;
     }
     .token6{
         transform: scale(0.65);
-        margin-right: 0rem;
+        margin-right: -1.5rem;
     }
     .token7{
         transform: scale(0.65);
@@ -525,7 +541,7 @@
         left: 13%;
     }
     .tokens {
-        left: 15%;
+        left: 10%;
     }
 }
 
@@ -699,36 +715,33 @@
     .tokens{
         margin-left:-2rem;
         padding-left: -2rem;
-        /* margin-right:-2rem; */
     }
     .token1{
-        transform: scale(0.5);
-        margin-left: 10%;
+        transform: scale(0.6);
+        margin-right: -1rem;
       }
     .token2{
-        transform: scale(0.5);
-        margin-left: -5%;
+        transform: scale(0.6);
+        margin-right: -1rem;
       }
     .token3{
-        transform: scale(0.5);
-        margin-left: -5%;
+        transform: scale(0.6);
+        margin-right: 0.5rem;
       }
     .token4{
-        transform: scale(0.5);
-        margin-left: -1%;
-        margin-right: -4%;
+        transform: scale(0.6);
+        margin-right: -1.5rem;
       }
     .token5{
-        transform: scale(0.5);
-        margin-left: -1%;
+        transform: scale(0.6);
+        margin-right: -1.5rem;
       }
     .token6{
-        transform: scale(0.5);
-        margin-left: -5%;
+        transform: scale(0.6);
+        margin-right: -1.5rem;
       }
     .token7{
-        transform: scale(0.5);
-        margin-left: -5%;
+        transform: scale(0.6);
     }
     .token1:hover {
         transform: scale(0.65);
@@ -799,6 +812,7 @@
         /* display:flex; */
         /* flex-wrap: wrap; */
         top: -5%;
+        left: 15%;
     }
     .timer-bar-container{
         margin-top: 73%;
@@ -809,24 +823,32 @@
     } */
     .token1{
         transform: scale(0.4);
+        margin-right: -2.5rem;
     }
     .token2{
         transform: scale(0.4);
+        margin-right: -2.5rem;
     }
     .token3{
         transform: scale(0.4);
+        margin-left: -0.5rem;
+        /* margin-right: -1.5rem; */
     }
     .token4{
         transform: scale(0.4);
+        margin-left: -3.5rem;
     }
     .token5{
         transform: scale(0.4);
+        margin-left: -1.5rem;
     }
     .token6{
         transform: scale(0.4);
+        margin-left: -2rem;
     }
     .token7{
         transform: scale(0.4);
+        margin-left: -2rem;
     }
     .token1:hover {
         transform: scale(0.5);
@@ -935,23 +957,24 @@
         top:-5%;
     }
     .token1{
-        margin-right: -5%;
+        margin-right: -3.5rem;
     }
     .token2{
-        margin-right: -5%;
+        margin-right: -3rem;
     }
     .token3{
-        margin-right: -5%;
+        margin-right: 0rem;
     }
     .token4{
-        margin-left: 1%;
-        margin-right: -5%;
+        margin-right: -2rem;
     }
     .token5{
-        margin-right: -5%;
+        /* margin-right: -5%; */
+        margin-right: -1.5rem;
     }
     .token6{
-        margin-right: -5%;
+        /* margin-right: -5%; */
+        margin-right: -1.5rem;
     }
 }
 
@@ -1096,7 +1119,7 @@
 }
 @media screen and (max-width:451px){
     .tokens{
-        left: -3%;
+        left: 10%;
     }
 }
 
@@ -1105,26 +1128,26 @@
         margin-top: 108%;
     }
     .tokens{
-        left: 2%;
+        left: 5%;
     }
     .token1{
         transform: scale(0.4);
     }
     .token2{
         transform: scale(0.4);
-        margin-left: -2rem;
+        margin-left: 0rem;
     }
     .token3{
         transform: scale(0.4);
-        margin-left: -2rem;
+        margin-left: -0.5rem;
     }
     .token4{
         transform: scale(0.4);
-        margin-left: -0.5rem;
+        margin-left: -3.5rem;
     }
     .token5{
         transform: scale(0.4);
-        margin-left: -0.5rem;
+        margin-left: -1.5rem;
     }
     
     .token6{
@@ -1245,15 +1268,16 @@
         width: 2.5rem;
     }
 }
-@media screen and (max-width:382px) {
+@media screen and (max-width:384px) {
     .timer-bar-container{
         margin-top: 115%;
     }
     .tokens{
-        left:5%;
+        left:10%;
     }
     .token1{
         transform: scale(0.3);
+        margin-right: -1rem;
     }
     .token2{
         transform: scale(0.3);
@@ -1261,20 +1285,20 @@
     }
     .token3{
         transform: scale(0.3);
-        margin-left: -3rem;
+        margin-left: -1.2rem;
     }
     .token4{
         transform: scale(0.3);
-        margin-left: -1.5rem;
+        margin-left: -4rem;
     }
     .token5{
         transform: scale(0.3);
-        margin-left: -0.5rem;
+        margin-left: -2.2rem;
     }
     
     .token6{
         transform: scale(0.3);
-        margin-left: -3rem;
+        margin-left: -2.8rem;
     }
     .token7{
         transform: scale(0.3);
@@ -1311,5 +1335,71 @@
         font-size: 0.35rem;
         margin-left: -2rem;
     }
+}
 
+@media screen and (max-width: 321px) {
+    .timer-bar-container{
+        margin-top: 135%;
+    }
+    .tokens{
+        left:0%;
+    }
+    .token1{
+        transform: scale(0.25);
+    }
+    .token2{
+        transform: scale(0.25);
+        margin-left: -3rem;
+    }
+    .token3{
+        transform: scale(0.25);
+        margin-left: -3rem;
+    }
+    .token4{
+        transform: scale(0.25);
+        margin-left: -1.5rem;
+    }
+    .token5{
+        transform: scale(0.25);
+        margin-left: -0.5rem;
+    }
+    .token6{
+        transform: scale(0.25);
+        margin-left: -3rem;
+    }
+    .token7{
+        transform: scale(0.25);
+        margin-left: -3rem;
+    }
+    .ANK button {
+        font-size: 0.28rem;
+        margin-right: -2rem;
+    }
+    .SP button {
+        font-size: 0.28rem;
+    }       
+    .DP button {
+        font-size: 0.28rem;
+        margin-left: -2rem;
+    }
+    .TP button {
+        font-size: 0.28rem;
+        margin-left: -3rem;
+    }
+    .JODI button {
+        font-size: 0.28rem;
+        margin-left: -3rem;
+    }
+    .HSANGAM button {
+        margin-left:1.2rem;
+        font-size: 0.28rem;
+    }
+    .FSANGAM button {
+        font-size: 0.28rem;
+        margin-left: -1.5rem;
+    }
+    .PATTI button {
+        font-size: 0.28rem;
+        margin-left: -2rem;
+    }
 }
