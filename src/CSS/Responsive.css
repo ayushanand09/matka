@@ -30,6 +30,15 @@
         margin-left: 10rem;
         font-size: 1.3rem;
     }
+    .rebet{
+        font-size: 1.2rem;
+    }
+    .remove{
+        font-size: 1.2rem;
+    }
+    .rebetX2{
+        font-size: 1.2rem;
+    }
     .timer-bar-container {
         border-radius: 2rem;
         width: 30%;
@@ -44,9 +53,9 @@
         border-radius: 2rem;
         width: 30%;
         height: 10px;
-        margin-top: 30%;
+        margin-top: 29%;
         margin-left: 40%;
-    }
+    }   
 }
 
 @media screen and (max-width: 1250px) {
@@ -60,6 +69,21 @@
         margin-left: 28rem;
         margin-left: 10rem;
         font-size: 1.25rem;
+    }
+    .bet-add-drop{
+        margin-top: -0.5rem;
+    }
+    .rebet{
+        font-size: 1rem;
+        height: 1.9rem;
+    }
+    .remove{
+        font-size: 1rem;
+        height: 1.9rem;
+    }
+    .rebetX2{
+        font-size: 1rem;
+        height: 1.9rem;
     }
     .timer-bar-container {
         margin-top: 33%;
@@ -369,6 +393,15 @@
     #txt{
         margin-left: 6rem;
         font-size: 1.2rem;
+    }
+    .rebet{
+        font-size: 1rem;
+    }
+    .remove{
+        font-size: 1rem;
+    }
+    .rebetX2{
+        font-size: 1rem;
     }
     .SP1{
         font-size: 0.9rem;
@@ -771,6 +804,16 @@
         margin-left: 3%;
         font-size: 1rem;
     }
+    .rebet{
+        font-size: 0.9rem;
+    }
+    .remove{
+        font-size: 0.9rem;
+    }
+    .rebetX2{
+        font-size: 0.9rem;
+    }
+
     .buttons {
         left: 2%;
     }
@@ -1042,6 +1085,16 @@
         margin-top:-1rem;
         font-size: 0.8rem;
     }
+    .rebet{
+        font-size: 0.75rem;
+    }
+    .remove{
+        font-size: 0.75rem;
+    }
+    .rebetX2{
+        font-size: 0.75rem;
+    }
+
     .ANK button {
         font-size: 0.45rem;
     }
@@ -1238,7 +1291,7 @@
         width: 2.5rem;
     }
 }
-@media screen and (max-width:384px) {
+@media screen and (max-width:391px) {
     .timer-bar-container{
         margin-top: 115%;
     }
@@ -1307,39 +1360,39 @@
     }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 331px) {
     .timer-bar-container{
         margin-top: 135%;
     }
     .tokens{
-        left:0%;
+        left:10%;
     }
     .token1{
         transform: scale(0.25);
     }
     .token2{
         transform: scale(0.25);
-        margin-left: -3rem;
+        margin-left: -3.5rem;
     }
     .token3{
         transform: scale(0.25);
-        margin-left: -3rem;
+        margin-left: -1.5rem;
     }
     .token4{
         transform: scale(0.25);
-        margin-left: -1.5rem;
+        margin-left: -4.5rem;
     }
     .token5{
         transform: scale(0.25);
-        margin-left: -0.5rem;
+        margin-left: -2.5rem;
     }
     .token6{
         transform: scale(0.25);
-        margin-left: -3rem;
+        margin-left: -3.3rem;
     }
     .token7{
         transform: scale(0.25);
-        margin-left: -3rem;
+        margin-left: -3.1rem;
     }
     .ANK button {
         font-size: 0.28rem;

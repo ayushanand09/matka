@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
-import "../CSS/Responsive.css"
+import "../CSS/Responsive.css";
 
 const Home = () => {
   const [displayANK, setDisplayANK] = useState(false);
@@ -9,16 +9,13 @@ const Home = () => {
   const [displaySPBtns, setDisplaySPBtns] = useState(false);
   const [hideExceptSP, setHideExceptSP] = useState(true);
   const [displayToken, setdisplayToken] = useState(false);
+  const [displayBet, setdisplayBet] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
   const [clickCount, setClickCount] = useState(0);
   const [animation, setAnimation] = useState(false);
 
-  const showToken = () => {
-    setdisplayToken(true);
-  };
-  const hideToken = () => {
-    setdisplayToken(false);
-  };
+  const [currentText, setCurrentText] = useState("");
+  const [timer, setTimer] = useState(0);
 
   const showANK = () => {
     setDisplayANK(true);
@@ -67,10 +64,52 @@ const Home = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setAnimation(true);
+    const showTimeout = setTimeout(() => {
+      setdisplayToken(true);
+      setdisplayBet(true);
+    }, 15000);
+
+    const hideTimeout = setTimeout(() => {
+      setdisplayToken(false);
+      setdisplayBet(false);
+    }, 55000);
+    
+    return () => {
+      clearTimeout(showTimeout);
+      clearTimeout(hideTimeout);
+    };
+    }, []);
+  useEffect(() => {
+    const texts = [
+      { text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
+      { text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
+      { text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
+    ];
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer + 1000);
     }, 1000);
-  }, []);
+
+    texts.forEach((text, index) => {
+      const textStartTime = texts
+        .slice(0, index)
+        .reduce((acc, t) => acc + t.duration, 0);
+      const textEndTime = textStartTime + text.duration;
+
+      if (timer >= textStartTime && timer < textEndTime) {
+        setCurrentText(text.text);
+      }
+    });
+    const totalDuration = texts.reduce((acc, text) => acc + text.duration, 0);
+
+    if (timer >= totalDuration) {
+      clearInterval(interval);
+      window.location.reload();
+    }
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [timer]);
 
   return (
     <>
@@ -80,7 +119,6 @@ const Home = () => {
         {displayToken && (
           <>
             <div className="tokens">
-              
               <br></br>
               <button className="token1"></button>
               <button className="token2"></button>
@@ -110,35 +148,81 @@ const Home = () => {
             190-0
           </div>
           <div id="card-2">
-            <img src={require("./Cards/card_spades_06.png")} alt="Not displaying image4" />
-            <img src={require("./Cards/card_hearts_03.png")} alt="Not displaying image5" />
-            <img src={require("./Cards/card_hearts_06.png")} alt="Not displaying image6" />
+            <img
+              src={require("./Cards/card_spades_06.png")}
+              alt="Not displaying image4"
+            />
+            <img
+              src={require("./Cards/card_hearts_03.png")}
+              alt="Not displaying image5"
+            />
+            <img
+              src={require("./Cards/card_hearts_06.png")}
+              alt="Not displaying image6"
+            />
             366-5
           </div>
           <div id="card-3">
-            <img src={require("./Cards/card_hearts_09.png")} alt="Not displaying image7" />
-            <img src={require("./Cards/card_clubs_04.png")} alt="Not displaying image8" />
-            <img src={require("./Cards/card_hearts_A.png")} alt="Not displaying image9" />
+            <img
+              src={require("./Cards/card_hearts_09.png")}
+              alt="Not displaying image7"
+            />
+            <img
+              src={require("./Cards/card_clubs_04.png")}
+              alt="Not displaying image8"
+            />
+            <img
+              src={require("./Cards/card_hearts_A.png")}
+              alt="Not displaying image9"
+            />
             149-4
           </div>
           <div id="card-4">
-            <img src={require("./Cards/card_spades_06.png")} alt="Not displaying image" />
-            <img src={require("./Cards/card_clubs_03.png")} alt="Not displaying image" />
-            <img src={require("./Cards/card_diamonds_10.png")} alt="Not displaying image" />
+            <img
+              src={require("./Cards/card_spades_06.png")}
+              alt="Not displaying image"
+            />
+            <img
+              src={require("./Cards/card_clubs_03.png")}
+              alt="Not displaying image"
+            />
+            <img
+              src={require("./Cards/card_diamonds_10.png")}
+              alt="Not displaying image"
+            />
             360-9
           </div>
           <div id="card-5">
-            <img src={require("./Cards/card_hearts_02.png")} alt="Not displaying image" />
-            <img src={require("./Cards/card_spades_05.png")} alt="Not displaying image" />
-            <img src={require("./Cards/card_hearts_02.png")} alt="Not displaying image" />
+            <img
+              src={require("./Cards/card_hearts_02.png")}
+              alt="Not displaying image"
+            />
+            <img
+              src={require("./Cards/card_spades_05.png")}
+              alt="Not displaying image"
+            />
+            <img
+              src={require("./Cards/card_hearts_02.png")}
+              alt="Not displaying image"
+            />
             235-0
           </div>
         </div>
         <div className="timer-bar-container">
           <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
         </div>
-        <span id="txt">Place your bets</span>
-
+        {/* <span id="txt">Place your bets</span> */}
+        {displayBet && (
+          <>
+        <div className="bet-add-drop">
+          <button className = "rebet">Rebet</button>
+          <button className = "remove">Remove</button>
+          <button className = "rebetX2">Rebet x2</button>
+        </div> 
+          </>
+        )
+        }
+        <span id="txt">{currentText}</span>
         <div className="buttons">
           <div className="ANK">
             <button
@@ -184,13 +268,8 @@ const Home = () => {
                   onClick={() => {
                     showSP();
                     showSPBtns();
-                    showToken();
+                    // showToken();
                   }}
-                  // style={{
-                  //   paddingRight: "1.7rem",
-                  //   paddingLeft: "1.7rem",
-                  //   backgroundColor: "red",
-                  // }}
                 >
                   SP
                 </button>
@@ -201,7 +280,7 @@ const Home = () => {
                       onClick={() => {
                         hideSP();
                         hideSPBtns();
-                        hideToken();
+                        // hideToken();
                       }}
                       style={{ backgroundColor: "blue", marginTop: "10px" }}
                     >
@@ -266,7 +345,12 @@ const Home = () => {
               </>
             )}
 
-            <button className="SP2" onClick={handleClick}>
+            <button
+              className="SP2"
+              onClick={() => {
+                handleClick();
+              }}
+            >
               {" "}
               SELECT ALL 2<span id="angle"> ^ </span>{" "}
             </button>
