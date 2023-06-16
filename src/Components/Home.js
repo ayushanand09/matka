@@ -1,8 +1,141 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
 import "../CSS/Responsive.css";
+const ButtonContent = ({ content, onBack }) => {
+  return (
+    <div>
+      <div>{content}</div>
+      <button className= "backANK" onClick={onBack}>BACK</button>
+    </div>
+  );  
+};
 
 const Home = () => {
+  const [activeButton, setActiveButton] = useState(null);
+
+  const buttons = [
+    {
+      name: "ANK",
+      id: 1,
+      // className: "Primary-btn",
+      nestedClasses: ['buttons', 'Primary-btn','btn1'] ,
+      content: (
+        <>
+          <div className="buttons">
+            <div className="ANK">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <br></br>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>0</button>
+            </div>
+          </div>
+        </>
+      ),
+    },
+    {
+      name: "SP",
+      id: 2,
+      nestedClasses: ['buttons', 'Primary-btn'] ,
+      // className: "Primary-btn",
+      content: (
+        <>
+          <div id="SP-btns">
+            <button className="SP1">
+              {" "}
+              SELECT ALL 1 <span id="angle"> ^ </span>{" "}
+            </button>
+            <div className="SP1-options-set1">
+              <button> 137 </button>
+              <button> 146 </button>
+              <button> 236 </button>
+              <button> 245 </button>
+              <button> 290 </button>
+              <button> 380 </button>
+            </div>
+            <div className="SP1-options-set2">
+              <button> 470 </button>
+              <button> 489 </button>
+              <button> 560 </button>
+              <button> 579 </button>
+              <button> 678 </button>
+              <button> 128 </button>
+            </div>
+            <button className="SP2">
+              {" "}
+              SELECT ALL 2<span id="angle"> ^ </span>{" "}
+            </button>
+            <div className="SP2-options-set1">
+              <button> 570 </button>
+              <button> 237 </button>
+              <button> 480 </button>
+              <button> 156 </button>
+              <button> 390 </button>
+              <button> 147 </button>
+            </div>
+            <div className="SP2-options-set2">
+              <button> 679 </button>
+              <button> 345 </button>
+              <button> 138 </button>
+              <button> 589 </button>
+              <button> 246 </button>
+              <button> 129 </button>
+            </div>
+            <button className="SP3">
+              {" "}
+              SELECT ALL 3<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP4">
+              {" "}
+              SELECT ALL 4<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP5">
+              {" "}
+              SELECT ALL 5<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP6">
+              {" "}
+              SELECT ALL 6<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP7">
+              {" "}
+              SELECT ALL 7<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP8">
+              {" "}
+              SELECT ALL 8<span id="angle"> ^ </span>{" "}
+            </button>
+            <button className="SP9">
+              {" "}
+              SELECT ALL 9<span id="angle"> ^ </span>{" "}
+            </button>
+          </div>
+          <br></br>
+        </>
+      ),
+    },
+    { name: "DP", id: 3,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 3 Content" },
+    { name: "TP", id: 4,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 4 Content" },
+    { name: "JODI", id: 5,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 5 Content" },
+    { name: "HALF SANGAM", id: 6,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 6 Content" },
+    { name: "FULL SANGAM", id: 7,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 7 Content" },
+    { name: "CYCLE PATTI", id: 8,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 8 Content" },
+  ];
+
+  const handleClick = (id) => {
+    setActiveButton(id);
+  };
+
+  const handleBack = () => {
+    setActiveButton(null);
+  };
+
   const [displayANK, setDisplayANK] = useState(false);
   const [hideExceptANK, setHideExceptANK] = useState(true);
   const [displaySP, setDisplaySP] = useState(false);
@@ -47,15 +180,6 @@ const Home = () => {
     setDisplaySPBtns(false);
   };
 
-  const handleClick = () => {
-    setClickCount(clickCount + 1);
-    if (clickCount % 2 === 0) {
-      handleTriggerClick();
-    } else {
-      handleHideButtons();
-    }
-  };
-
   const handleTriggerClick = () => {
     setShowButtons(true);
   };
@@ -73,12 +197,12 @@ const Home = () => {
       setdisplayToken(false);
       setdisplayBet(false);
     }, 55000);
-    
+
     return () => {
       clearTimeout(showTimeout);
       clearTimeout(hideTimeout);
     };
-    }, []);
+  }, []);
   useEffect(() => {
     const texts = [
       { text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
@@ -115,11 +239,9 @@ const Home = () => {
     <>
       <div className="container">
         <h1>MATKA UI</h1>
-
         {displayToken && (
           <>
             <div className="tokens">
-              <br></br>
               <button className="token1"></button>
               <button className="token2"></button>
               <button className="token3"></button>
@@ -208,22 +330,29 @@ const Home = () => {
             235-0
           </div>
         </div>
-        <div className="timer-bar-container">
-          <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
+        <div style={{ marginTop: "-8rem" }}>
+          <div className="timer-bar-container">
+            <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
+          </div>
+          {/* <span id="txt">Place your bets</span> */}
+          <div className="display-bet-three-buttons">
+            <div>
+              <span id="txt" style={{ marginTop: "15px" }}>
+                {currentText}
+              </span>{" "}
+            </div>
+            {displayBet && (
+              <>
+                <div className="bet-add-drop">
+                  <button className="rebet">Rebet</button>
+                  <button className="remove">Remove</button>
+                  <button className="rebetX2">Rebet x2</button>
+                </div>
+              </>
+            )}
+          </div>
         </div>
-        {/* <span id="txt">Place your bets</span> */}
-        {displayBet && (
-          <>
-        <div className="bet-add-drop">
-          <button className = "rebet">Rebet</button>
-          <button className = "remove">Remove</button>
-          <button className = "rebetX2">Rebet x2</button>
-        </div> 
-          </>
-        )
-        }
-        <span id="txt">{currentText}</span>
-        <div className="buttons">
+        {/* <div className="buttons">
           <div className="ANK">
             <button
               className="btn1"
@@ -298,7 +427,8 @@ const Home = () => {
               <div className="JODI">
                 <button className="btn5">JODI</button>
               </div>
-              <br></br>
+              <br />
+              <br />
               <div className="HSANGAM">
                 <button className="btn6">HALF SANGAM</button>
               </div>
@@ -310,9 +440,30 @@ const Home = () => {
               </div>
             </>
           )}
+        </div> */}
+        {/* ****************************************************************************************************************************************** */}
+        {/* NEW BUTTONS */}
+        {/* ****************************************************************************************************************************************** */}
+        <div>
+          {activeButton ? (
+            <ButtonContent
+              content={
+                buttons.find((button) => button.id === activeButton).content
+              }
+              onBack={handleBack}
+            />
+          ) : (
+            buttons.map((button) => (
+              <button key={button.id} className={button.nestedClasses.join(' ')} onClick={() => handleClick(button.id)}>
+                {button.name}
+              </button>
+            ))
+          )}
         </div>
+        {/* ****************************************************************************************************************************************** */}
+        {/* ****************************************************************************************************************************************** */}
       </div>
-      {displaySPBtns && (
+      {/* {displaySPBtns && (
         <>
           <div id="SP-btns">
             <button
@@ -405,7 +556,7 @@ const Home = () => {
           </div>
           <br></br>
         </>
-      )}
+      )} */}
     </>
   );
 };

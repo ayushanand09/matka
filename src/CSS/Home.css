@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
   margin: 0px;
   padding: 0px;
@@ -14,12 +15,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  height: calc(100vh + 50px);
+  height: 100vh;
+  /* height: calc(100vh + 50px); */
 }
 
 .container h1 {
-  margin-top: 1rem;
-  display: inline-flex;
+  /* display: inline-block; */
   text-align: center;
   /* border: 2px solid white; */
   padding: 0.3rem;
@@ -48,16 +49,18 @@ body {
 }
 
 #txt {
-  color: white;
   /* position: fixed; */
+  /* left:38%; */
+  /* margin-top: -1.4rem; */
+  /* margin-left: 10rem; */
+  color: white;
   display: flex;
   flex-wrap: wrap;
-  left:38%;
   justify-content: center;
   padding: 1rem;
-  margin-top: -1.4rem;
-  margin-left: 10rem;
   font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.605);
+  border-radius: 20px;
   font-size: 1.5rem;
   animation: blink 1s infinite;
 }
@@ -76,11 +79,11 @@ body {
 .timer-bar-container {
   border-radius: 2rem;
   display: flex;
-  width: 30%;
+  width: 20%;
   height: 10px; 
   /* background-color: blue; */
-  margin-top: 30%;
-  margin-left: 40%;
+  /* margin-top: 30%;
+  margin-left: 40%; */
 }
 
 .timer-bar {
@@ -91,7 +94,8 @@ body {
   background-color: rgb(220, 192, 5);
   animation-name: progress;
   /* animation-duration: 40s; */
-  animation-duration: 70s;
+  animation-delay: 15s; /* Changed */
+  animation-duration: 40s;
   animation-timing-function: linear;
 }
 
@@ -105,12 +109,14 @@ body {
 }
 
 .tokens {
-  display: inline-block;
-  justify-content: center;
-  margin-top: 20rem;
-  left: 25%;
   position: absolute;
+  top: 30%;
+  left: 20%;
+  justify-content: center;
   animation: token-display 1s ease-in-out;
+  /* margin-top: 20rem; */
+  /* left: 25%; */
+  /* position: absolute; */
 }
 @keyframes token-display {
   0% {
@@ -205,14 +211,21 @@ body {
   transform: scale(1.2);
 }
 .cards {
+  position: absolute;
+  right: 1%;
+  top: 10%;
   background-color: black;
   opacity: 0.8;
   padding: 1rem;
   color: rgba(206, 183, 9, 0.962);
   font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  float: right;
+}
+.display-bet-three-buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 img {
@@ -222,11 +235,18 @@ img {
 }
 .bet-add-drop{
   margin-top: 1rem;
-  position: absolute;
+  /* position: absolute; */
   /* left: 40%; */
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* margin-bottom: 4rem; */
   animation: bet-display 1s ease-in-out;
 }
+
+
+
 @keyframes bet-display {
   0% {
     opacity: 0;
@@ -240,7 +260,6 @@ img {
   }
 }
 
-
 .rebet{
   /* bottom: 2rem; */
   /* left: 30%; */
@@ -250,14 +269,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: inline-block;
+  /* display: inline-block; */ 
   margin: 1rem;
   background-color: black;
   color: white;
   opacity: 0.6;
   font-size: 1.3rem;
-
 }
+
 .remove{
   /* bottom: 2rem; */
   /* left: 30%; */
@@ -267,14 +286,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 1rem;
   background-color: black;
   color: white;
   opacity: 0.6;
   font-size: 1.3rem;
-
 }
+
 .rebetX2{
   /* bottom: 2rem; */
   /* left: 30%; */
@@ -284,38 +303,46 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 1rem;
   background-color: black;
   color: white;
   opacity: 0.6;
   font-size: 1.3rem;
 }
-
 .buttons {
-  bottom: 2rem;
-  left: 30%;
-  margin-bottom: -2rem;
-  position: absolute;
-  display: block;
   padding: 1rem;
   border-radius: 0.5rem;
   display: inline-block;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  /* margin-left: 5rem; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.Primary-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  background-color: red;
+  color: white;
+  margin-right: 1rem;
+  /* text-align: center; */
 }
 
-.ANK {
-  /* display: block; */
+/* .ANK {
   padding: 1rem;
   border-radius: 0.5rem;
   display: inline-block;
-}
+} */
 
 .ANK button {
   background-color: rgba(227, 136, 10, 0.962);
   font-size: 1rem;
   margin-left: 1rem;
+  margin-top: 0.5rem;
   padding-top: 0.5rem;
   padding-right: 1.4rem;
   padding-left: 1.5rem;
@@ -330,14 +357,25 @@ img {
 }
 
 .backANK {
-    color: white;
-  /* background-color: blue;
-  margin-top: 10px; */
+  font-size: 1rem;
+  /* margin-left: 10rem; */
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:   -3.3rem;
 }
 
 .btn1 {
   color: white;
 }
+
 .SP {
   /* display: flex; */
   padding: 1rem;
@@ -380,6 +418,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  top:20rem;
 }
 .SP1 {
   margin-top: 0.5rem;
