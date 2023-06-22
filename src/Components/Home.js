@@ -1,34 +1,85 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
 import "../CSS/Responsive.css";
-const ButtonContent = ({ content, onBack }) => {
+const ButtonContent = ({ content, onBack, id }) => {
   return (
     <div>
       <div>{content}</div>
-      <button className= "backANK" onClick={onBack}>BACK</button>
+      {id == 1 ? (
+        ""
+      ) : (
+        <button className="backANK" onClick={onBack}>
+          BACK
+        </button>
+      )}
     </div>
-  );  
+  );
 };
 
 const Home = () => {
+  const [displaySPBtns, setDisplaySPBtns] = useState(true);
+  const [hideExceptSP, setHideExceptSP] = useState(true);
+  const [showSPButtons1, setShowButtons1] = useState(false);
+  const [showSPButtons2, setShowButtons2] = useState(false);
+
+  const showSPBtns = () => {
+    setDisplaySPBtns(true);
+  };
+  const hideSPBtns = () => {
+    setDisplaySPBtns(false);
+  };
+
+  var click = 0;
+  const handleTriggerClick1 = () => {
+    console.log(click);
+    click = click + 1;
+    if (click % 2 == 0) {
+      setShowButtons1(false);
+    } else {
+      setShowButtons1(true);
+    }
+  };
+  const handleTriggerClick2 = () => {
+    console.log(click);
+    click = click + 1;
+    if (click % 2 == 0) {
+      setShowButtons2(false);
+    } else {
+      setShowButtons2(true);
+    }
+  };
+
   const [activeButton, setActiveButton] = useState(null);
+  const hideANKBtns = () => {
+    setHideExceptANK(false);
+  };
+  const showANK = () => {
+    setDisplayANK(true);
+  };
+  const handleBack = () => {
+    setActiveButton(null);
+  };
 
   const buttons = [
     {
       name: "ANK",
       id: 1,
       // className: "Primary-btn",
-      nestedClasses: ['buttons', 'Primary-btn','btn1'] ,
+      nestedClasses: ["buttons", "Primary-btn", "btn1"],
       content: (
         <>
           <div className="buttons">
             <div className="ANK">
+              <button className="ANK2">ANK</button>
               <button>1</button>
               <button>2</button>
               <button>3</button>
               <button>4</button>
               <button>5</button>
               <br></br>
+              <button className="backANK" onClick={handleBack}>
+                BACK
+              </button>
               <button>6</button>
               <button>7</button>
               <button>8</button>
@@ -42,51 +93,70 @@ const Home = () => {
     {
       name: "SP",
       id: 2,
-      nestedClasses: ['buttons', 'Primary-btn'] ,
+      nestedClasses: ["buttons", "Primary-btn"],
       // className: "Primary-btn",
       content: (
         <>
+          <div className="new-sp-set">
+            <button className="SP-New">SP</button>
+            <button
+              className="backANK"
+              onClick={() => {
+                handleBack();
+              }}
+            >
+              BACK
+            </button>
+          </div>
           <div id="SP-btns">
-            <button className="SP1">
+            <button className="SP1" onClick={handleTriggerClick1}>
               {" "}
               SELECT ALL 1 <span id="angle"> ^ </span>{" "}
             </button>
-            <div className="SP1-options-set1">
-              <button> 137 </button>
-              <button> 146 </button>
-              <button> 236 </button>
-              <button> 245 </button>
-              <button> 290 </button>
-              <button> 380 </button>
-            </div>
-            <div className="SP1-options-set2">
-              <button> 470 </button>
-              <button> 489 </button>
-              <button> 560 </button>
-              <button> 579 </button>
-              <button> 678 </button>
-              <button> 128 </button>
-            </div>
-            <button className="SP2">
+            {showSPButtons1 && (
+              <>
+                <div className="SP1-options-set1">
+                  <button> 137 </button>
+                  <button> 146 </button>
+                  <button> 236 </button>
+                  <button> 245 </button>
+                  <button> 290 </button>
+                  <button> 380 </button>
+                </div>
+                <div className="SP1-options-set2">
+                  <button> 470 </button>
+                  <button> 489 </button>
+                  <button> 560 </button>
+                  <button> 579 </button>
+                  <button> 678 </button>
+                  <button> 128 </button>
+                </div>
+              </>
+            )}
+            <button className="SP2" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2<span id="angle"> ^ </span>{" "}
             </button>
-            <div className="SP2-options-set1">
-              <button> 570 </button>
-              <button> 237 </button>
-              <button> 480 </button>
-              <button> 156 </button>
-              <button> 390 </button>
-              <button> 147 </button>
-            </div>
-            <div className="SP2-options-set2">
-              <button> 679 </button>
-              <button> 345 </button>
-              <button> 138 </button>
-              <button> 589 </button>
-              <button> 246 </button>
-              <button> 129 </button>
-            </div>
+            {showSPButtons2 && (
+              <>
+                <div className="SP2-options-set1">
+                  <button> 570 </button>
+                  <button> 237 </button>
+                  <button> 480 </button>
+                  <button> 156 </button>
+                  <button> 390 </button>
+                  <button> 147 </button>
+                </div>
+                <div className="SP2-options-set2">
+                  <button> 679 </button>
+                  <button> 345 </button>
+                  <button> 138 </button>
+                  <button> 589 </button>
+                  <button> 246 </button>
+                  <button> 129 </button>
+                </div>
+              </>
+            )}
             <button className="SP3">
               {" "}
               SELECT ALL 3<span id="angle"> ^ </span>{" "}
@@ -120,48 +190,68 @@ const Home = () => {
         </>
       ),
     },
-    { name: "DP", id: 3,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 3 Content" },
-    { name: "TP", id: 4,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 4 Content" },
-    { name: "JODI", id: 5,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 5 Content" },
-    { name: "HALF SANGAM", id: 6,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 6 Content" },
-    { name: "FULL SANGAM", id: 7,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 7 Content" },
-    { name: "CYCLE PATTI", id: 8,nestedClasses: ['buttons', 'Primary-btn'] ,content: "Button 8 Content" },
+    {
+      name: "DP",
+      id: 3,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 3 Content",
+    },
+    {
+      name: "TP",
+      id: 4,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 4 Content",
+    },
+    {
+      name: "JODI",
+      id: 5,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 5 Content",
+    },
+    {
+      name: "HALF SANGAM",
+      id: 6,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 6 Content",
+    },
+    {
+      name: "FULL SANGAM",
+      id: 7,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 7 Content",
+    },
+    {
+      name: "CYCLE PATTI",
+      id: 8,
+      nestedClasses: ["buttons", "Primary-btn"],
+      content: "Button 8 Content",
+    },
   ];
 
   const handleClick = (id) => {
     setActiveButton(id);
   };
 
-  const handleBack = () => {
-    setActiveButton(null);
-  };
-
   const [displayANK, setDisplayANK] = useState(false);
   const [hideExceptANK, setHideExceptANK] = useState(true);
   const [displaySP, setDisplaySP] = useState(false);
-  const [displaySPBtns, setDisplaySPBtns] = useState(false);
-  const [hideExceptSP, setHideExceptSP] = useState(true);
+  // const [displaySPBtns, setDisplaySPBtns] = useState(false);
+  // const [hideExceptSP, setHideExceptSP] = useState(true);
   const [displayToken, setdisplayToken] = useState(false);
   const [displayBet, setdisplayBet] = useState(false);
-  const [showButtons, setShowButtons] = useState(false);
+  // const [showButtons, setShowButtons] = useState(false);
   const [clickCount, setClickCount] = useState(0);
   const [animation, setAnimation] = useState(false);
 
   const [currentText, setCurrentText] = useState("");
   const [timer, setTimer] = useState(0);
 
-  const showANK = () => {
-    setDisplayANK(true);
-  };
   const hideANK = () => {
     setDisplayANK(false);
   };
 
   const showANKBtns = () => {
     setHideExceptANK(true);
-  };
-  const hideANKBtns = () => {
-    setHideExceptANK(false);
   };
 
   const showSP = () => {
@@ -173,19 +263,12 @@ const Home = () => {
     setHideExceptSP(false);
   };
 
-  const showSPBtns = () => {
-    setDisplaySPBtns(true);
-  };
-  const hideSPBtns = () => {
-    setDisplaySPBtns(false);
-  };
-
-  const handleTriggerClick = () => {
-    setShowButtons(true);
-  };
-  const handleHideButtons = () => {
-    setShowButtons(false);
-  };
+  // const handleTriggerClick = () => {
+  //   setShowButtons(true);
+  // };
+  // const handleHideButtons = () => {
+  //   setShowButtons(false);
+  // };
 
   useEffect(() => {
     const showTimeout = setTimeout(() => {
@@ -205,9 +288,9 @@ const Home = () => {
   }, []);
   useEffect(() => {
     const texts = [
-      { text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
-      { text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
-      { text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
+      { id: "txt",text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
+      {  id: "txt",text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
+      {  id: "txt",text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
     ];
     const interval = setInterval(() => {
       setTimer((prevTimer) => prevTimer + 1000);
@@ -241,14 +324,16 @@ const Home = () => {
         <h1>MATKA UI</h1>
         {displayToken && (
           <>
-            <div className="tokens">
-              <button className="token1"></button>
-              <button className="token2"></button>
-              <button className="token3"></button>
-              <button className="token4"></button>
-              <button className="token5"></button>
-              <button className="token6"></button>
-              <button className="token7"></button>
+            <div className="tokens-outer">
+              <div className="tokens">
+                <button className="token1"></button>
+                <button className="token2"></button>
+                <button className="token3"></button>
+                <button className="token4"></button>
+                <button className="token5"></button>
+                <button className="token6"></button>
+                <button className="token7"></button>
+              </div>
             </div>
           </>
         )}
@@ -330,14 +415,15 @@ const Home = () => {
             235-0
           </div>
         </div>
-        <div style={{ marginTop: "-8rem" }}>
+        {/* <div className="time-bar-outer-container"> */}
           <div className="timer-bar-container">
             <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
           </div>
           {/* <span id="txt">Place your bets</span> */}
           <div className="display-bet-three-buttons">
             <div>
-              <span id="txt" style={{ marginTop: "15px" }}>
+              {/* <span className="txt" style={{ marginTop: "15px" }}> */}
+              <span className="txt">
                 {currentText}
               </span>{" "}
             </div>
@@ -351,7 +437,7 @@ const Home = () => {
               </>
             )}
           </div>
-        </div>
+        {/* </div> */}
         {/* <div className="buttons">
           <div className="ANK">
             <button
@@ -444,17 +530,22 @@ const Home = () => {
         {/* ****************************************************************************************************************************************** */}
         {/* NEW BUTTONS */}
         {/* ****************************************************************************************************************************************** */}
-        <div>
+        <div className="new-buttons">
           {activeButton ? (
             <ButtonContent
               content={
                 buttons.find((button) => button.id === activeButton).content
               }
               onBack={handleBack}
+              id={activeButton}
             />
           ) : (
             buttons.map((button) => (
-              <button key={button.id} className={button.nestedClasses.join(' ')} onClick={() => handleClick(button.id)}>
+              <button
+                key={button.id}
+                className={button.nestedClasses.join(" ")}
+                onClick={() => handleClick(button.id)}
+              >
                 {button.name}
               </button>
             ))

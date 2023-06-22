@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 1309px) {
-    #txt{
+    .txt{
         padding: 1rem;
         margin-top: -1.4rem;
         margin-left: 28rem;
@@ -63,7 +63,7 @@
         font-size: 1.5rem;
         width: 8.5rem;
     }
-    #txt{
+    .txt{
         padding: 1rem;
         margin-top: -1.4rem;
         margin-left: 28rem;
@@ -86,13 +86,13 @@
         height: 1.9rem;
     }
     .timer-bar-container {
-        margin-top: 33%;
+        top: 10%;
     }
     .tokens{
         left: 15%
     }
-    .buttons{
-        left: 20%
+    .Primary-btn{
+        font-size: 0.8rem;
     }
     .token1{
         transform: scale(0.85);
@@ -125,10 +125,13 @@
 }
 
 @media screen and (max-width: 1150px){
+    .txt{
+        margin:1rem;
+    }
     .timer-bar-container {
         margin-top: 37%;
     }
-    .tokens{
+    .tokens-outer{
         left: 20%;
     }
     .token1{
@@ -160,9 +163,9 @@
         transform: scale(0.80);
         margin-right: 0rem;
     }
-    .buttons{
+    /* .buttons{
         left: 15%
-    }
+    } */
     .ANK button {
         font-size: 0.8rem;
         padding-top: 0.4rem;
@@ -223,6 +226,16 @@
     }
 }
 
+@media screen and (max-width:1092px) {
+    .new-buttons{
+      width: 75%;
+    }
+    .time-bar-outer-container
+    {
+      margin-top: 0;
+    } 
+}
+  
 @media screen and (max-width: 1060px){
     .timer-bar-container {
         margin-top: 40%;
@@ -393,7 +406,7 @@
     .buttons {
         left: 15%;
     } 
-    #txt{
+    .txt{
         margin-left: 6rem;
         font-size: 1.2rem;
     }
@@ -463,12 +476,12 @@
           
 }
 
-@media screen and (max-width: 930px){   
+@media screen and (max-width: 933px){   
     .timer-bar-container{
         margin-top: 46%;
         margin-left: 35%;
     }
-    #txt{
+    .txt{
         margin-left: 2rem;
         font-size: 1.2rem;
     }
@@ -584,6 +597,22 @@
     }
 }
 
+@media screen and (max-width:786px) {
+    .tokens-outer
+    {
+      left: 10%;
+    }
+    .new-buttons
+    {
+      width: 78%;
+    }
+    .time-bar-outer-container
+    {
+      margin-top: 0;
+    }
+  }
+  
+
 @media screen and (max-width:775px) {
     .container h1{
         font-size: 1.2rem;
@@ -668,8 +697,9 @@
 }
 
 @media screen and (max-width: 750px) {
-    #txt{
-        margin-right: 10%;
+    .txt{
+        /* font-size: 1rem; */
+        /* margin-right: 10%; */
     }
     .timer-bar-container{
         margin-top: 58%;
@@ -813,7 +843,7 @@
         margin-top: 65%;
         margin-left: 30%;
     }
-    #txt{
+    .txt{
         margin-left: 3%;
         font-size: 1rem;
     }
@@ -1027,6 +1057,49 @@
         width: 1.3rem;
     }
 }
+
+@media screen and (max-width:586px) {
+    .tokens-outer
+    {
+      left: 15%;
+    }
+    .buttons
+    {
+      width: 100%;
+    }
+    .ANK button
+    {
+      margin-right: 0;
+  
+    }
+    .new-buttons{
+      width: 100%;
+    }
+    .buttons
+    {
+      padding: 0.5rem;
+  
+    }
+    .Primary-btn
+    {
+      padding: 0.5rem;
+      margin: 0.4rem;
+      font-size: 0.8rem;
+    }
+    .time-bar-outer-container
+    {
+      margin-top: -10rem;
+    }
+    .bet-add-drop
+    {
+      width: 90%;
+    }
+    .txt
+    {
+      width: 100%;
+    }
+  }
+    
 @media screen and (max-width: 555px){
     .timer-bar-container{
         margin-top: 80%;
@@ -1156,11 +1229,25 @@
     }
 }
 
+@media screen and (max-width:480px) {
+    .ANK button
+    {
+      margin-right: 0;
+    }
+    .new-buttons
+    {
+      width: 100%;
+    }
+    .tokens{
+      min-height: 50vh;
+    }
+  }   
+
 @media screen and (max-width: 470px) {
     .timer-bar-container{
         margin-top: 95%;
     }
-    #txt{
+    .txt{
         margin-top:-1rem;
         font-size: 0.8rem;
     }
