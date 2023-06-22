@@ -4,6 +4,7 @@ import "../CSS/Responsive.css";
 const ButtonContent = ({ content, onBack, id }) => {
   return (
     <div>
+    
       <div>{content}</div>
       {id == 1 ? (
         ""
