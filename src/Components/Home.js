@@ -675,7 +675,7 @@ const Home = () => {
       content: (
         <>
           <div className="new-sp-set">
-            <button className="SP-New">DP</button>
+            <button className="SP-New">TP</button>
             <button
               className="backANK"
               onClick={() => {
@@ -914,7 +914,7 @@ const Home = () => {
       content: (
         <>
           <div className="new-sp-set">
-            <button className="SP-New">DP</button>
+            <button className="SP-New">JODI</button>
             <button
               className="backANK"
               onClick={() => {
@@ -1153,7 +1153,7 @@ const Home = () => {
       content: (
         <>
           <div className="new-sp-set">
-            <button className="SP-New">DP</button>
+            <button className="SP-New">HALF SANGAM</button>
             <button
               className="backANK"
               onClick={() => {
@@ -1392,7 +1392,7 @@ const Home = () => {
       content: (
         <>
           <div className="new-sp-set">
-            <button className="SP-New">DP</button>
+            <button className="SP-New">FULL SANGAM</button>
             <button
               className="backANK"
               onClick={() => {
