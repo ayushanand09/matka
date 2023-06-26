@@ -542,7 +542,7 @@ img {
   border-radius: 0.5rem;
   padding-top: 0.5rem;
 }
-#angle {
+.angle {
   display: block;
   margin-right: 5px;
   font-size: 1.2rem;
@@ -552,6 +552,38 @@ img {
   -o-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
+}
+.uptick-animation{
+  animation: uptick 0.5s forwards;
+}
+@keyframes uptick {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+}
+
+.downtick-animation{
+  animation: downtick 0.5s forwards;
+}
+@keyframes downtick {
+  from {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .SP1-options-set1 {
