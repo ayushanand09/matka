@@ -2,9 +2,15 @@ const express= require("express");
 const app = express()
 const WebSocket = require("ws");
 app.use(express.json())
+const {default:mongoose} =require("mongoose")
 
 
-app.get("/user",require("./routs/routs"))
+mongoose.connect("mongodb+srv://123:1234@cluster0.pf4v08v.mongodb.net/matka",{useNewUrlParser:true})
+.then(()=>{console.log("mongodb is connected")})
+.catch((err)=>{console.log(err)})
+
+
+app.use("/user",require("./routs/routs"))
 app.get("/", (req, res) => {
   const ws = new WebSocket("wss://matka.kasoom.com:9007/matka");
 

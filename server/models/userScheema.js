@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const objectId = mongoose.Schema.Types.ObjectId
 
 const UserSchema = new mongoose.Schema({
-  username: {
+  name: {
     type: String,
     required: true,
     unique: true,
@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
   },
   accountId: {
     type:objectId,
-    default: "null",
+    ref:"account"
   },
 });
 

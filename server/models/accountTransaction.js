@@ -17,7 +17,7 @@ const accountTranSchema = new mongoose.Schema({
   },
   transactionType:{
         type : String,
-        enum :["bet","betCancel"],
+        enum :["bet","betCancel","win"],
     require:true
   }
 },{timeStamps:true});

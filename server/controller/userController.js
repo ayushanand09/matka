@@ -16,9 +16,10 @@ let register = async (req, res) => {
         if (emailCheck) return res.status(409).send({ status: false, msg: "email is already used " })
         if (!password) return res.status(400).send({ status: false, msg: "password is mandatory" })
 
-        let createdUser = await userModel.create(req.body).lean();
-        await accountModel.create({ userId: createdUser._id })
-
+        let createdUser = await userModel.create(req.body);
+       let accountCreated = await accountModel.create({ userId: createdUser._id })
+       
+       await userModel.findOneAndUpdate({_id:createdUser._id},{accountId:accountCreated._id})
         return res.status(201).send({ status: true, message: createdUser })
     }
     catch (err) {
@@ -30,7 +31,6 @@ module.exports.register = register;
 
 
 const login = async (req, res) => {
-
     try {
         let requestBody = req.body;
         const { email, password } = requestBody;
@@ -41,11 +41,11 @@ const login = async (req, res) => {
         if (!password) return res.status(400).send({ status: false, msg: "name is mandatory" })
         if (!email) return res.status(400).send({ status: false, msg: "email is mandatory" })
 
-        let loginUser = await userModel.findOne({ $and: [{ email: email }, { password: password }] }).lean()
+        let loginUser = await userModel.findOne({ $and: [{ email: email }, { password: password }] }).lean().populate({path:"accountId",select:{totalAmount:1,_id:0}})
         if (!loginUser) return response.status(400).send({ status: false, message: "user is not found" })
 
-        let token = await jwt.sign(loginUser, "matka", { expiresIn: "24h" })
-        return res.status(200).send({ token })
+        // let token = await jwt.sign(loginUser, "matka", { expiresIn: "24h" })
+        return res.status(200).send({ loginUser })
     }
     catch (err) {
         return res.status(500).send({ status: false, message: err.message })
@@ -75,9 +75,8 @@ module.exports.update = update;
 const deleteUser = async (req, res) => {
 
     try {
-        let { id } = req.body.id;
-
-        let userDelete = await userModel.findOneAndDelete({ _id: id })
+        let { id } = req.body
+        let userDelete = await userModel.deleteOne({ _id:id })
         return res.status(200).send({ status: true, message: userDelete })
     }
 

@@ -9,7 +9,7 @@ const accountSchema = new mongoose.Schema({
   },
   totalAmount:{
     type:String,
-    default: 0,
+    default: "0",
   }
 },{timeStamp:true});
 
