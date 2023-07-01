@@ -1,0 +1,847 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(77, 7, 124);
+  color: white;
+}
+
+.container {
+  background-image: url("../Components/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+  /* height: calc(100vh + 50px); */
+}
+
+.container h1 {
+  /* display: inline-block; */
+  text-align: center;
+  top:10%;
+  /* border: 2px solid white; */
+  padding: 0.3rem;
+  width: 11rem;
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(from var(--border-angle),#213,#112 50%,#213),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.txt {
+  /* position: fixed; */
+  /* left:38%; */
+  /* margin-top: -1.4rem; */
+  /* margin-left: 10rem; */
+  margin-top: 15px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.605);
+  border-radius: 20px;
+  font-size: 1.5rem;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.timer-bar-container {
+  border-radius: 2rem;
+  display: flex;
+  width: 20%;
+  height: 10px; 
+  /* position: relative; */
+  /* background-color: blue; */
+  /* margin-top: 30%;
+  margin-left: 40%; */
+}
+
+.timer-bar {
+  border-radius: 2rem;
+  display: flex;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(220, 192, 5);
+  animation-name: progress;
+  
+  /*Changed*/
+  animation-delay: 15s;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.tokens-outer
+{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.tokens {
+  /* position: absolute;
+  top: 30%;
+  left: 20%; */
+  justify-content: center;
+  animation: token-display 1s ease-in-out;
+}
+@keyframes token-display {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.token1{
+  background-image: url("../../public/UI/Chips/chip_1.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token2{
+  background-image: url("../../public/UI/Chips/chip_5.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token3{
+  background-image: url("../../public/UI/Chips/chip_10.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token4{
+  background-image: url("../../public/UI/Chips/chip_20.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token5{
+  background-image: url("../../public/UI/Chips/chip_50.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token6{
+  background-image: url("../../public/UI/Chips/chip_100.png");
+  height: 6.5rem;
+  width: 6.8rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token7{
+  background-image: url("../../public/UI/Chips/chip_250.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+}
+.token1:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token2:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token3:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token4:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token5:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token6:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token7:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.cards {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  background-color: black;
+  opacity: 0.8;
+  padding: 1rem;
+  color: rgba(206, 183, 9, 0.962);
+  font-size: 1.5rem;
+}
+.display-bet-three-buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  display: inline-block;
+  height: 2rem;
+  width: 1.8rem;
+}
+.bet-add-drop{
+  margin-top: 1rem;
+  /* position: absolute; */
+  /* left: 40%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* margin-bottom: 4rem; */
+  animation: bet-display 1s ease-in-out;
+}
+
+
+
+@keyframes bet-display {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.rebet{
+  /* bottom: 2rem; */
+  /* left: 30%; */
+  border-radius: 0.5rem;
+  width: 6.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block; */ 
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+.remove{
+  /* bottom: 2rem; */
+  /* left: 30%; */
+  border-radius: 0.5rem;
+  width: 6.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block; */
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+.rebetX2{
+  /* bottom: 2rem; */
+  /* left: 30%; */
+  border-radius: 0.5rem;
+  width: 6.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block; */
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+.new-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  flex-wrap: wrap;
+  /* margin-top:-3rem; */
+}
+
+.buttons {
+  /* padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block; */
+  /* margin-left: 5rem; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.Primary-btn {
+  display: inline-block;
+  font-size: 1rem;
+  /* padding: 1rem; */
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: red;
+  color: white;
+  margin: 0.8rem;
+  /* text-align: center; */
+}
+
+/* .time-bar-outer-container
+{
+  margin-top: -8rem;
+  height: 200px;
+} */
+
+/* @media screen and (max-width:1092px) {
+  .new-buttons{
+    width: 75%;
+  }
+  .time-bar-outer-container
+  {
+    margin-top: 0;
+  } 
+} */
+
+/* @media screen and (max-width:786px) {
+  .tokens-outer
+  {
+    left: 10%;
+  }
+  .new-buttons
+  {
+    width: 78%;
+  }
+  .time-bar-outer-container
+  {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width:586px) {
+  
+  .buttons
+  {
+    width: 100%;
+  }
+  .ANK button
+  {
+    margin-right: 0;
+
+  }
+  .new-buttons{
+    width: 100%;
+  }
+  .buttons
+  {
+    padding: 0.5rem;
+
+  }
+  .Primary-btn
+  {
+    padding: 0.5rem;
+    margin: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .time-bar-outer-container
+  {
+    margin-top: -10rem;
+  }
+  .bet-add-drop
+  {
+    width: 90%;
+  }
+  .txt
+  {
+    width: 100%;
+  }
+}
+ */
+.ANK button {
+  background-color: rgba(227, 136, 10, 0.962);
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* @media screen and (max-width:480px) {
+  .ANK button
+  {
+    margin-right: 0;
+  }
+  .new-buttons
+  {
+    width: 100%;
+  }
+  .tokens{
+    min-height: 50vh;
+  }
+}  */
+
+.ANK
+{
+  width: 100%;
+}
+
+.ANK .btn1{
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  background-color: red;
+}
+
+.ANK2
+{
+  background-color: #f03 !important;
+  color: white;
+  width: 19%;
+  padding: 1rem;
+}
+
+.backANK {
+  /* width: 70%; */
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: blue !important;
+}
+
+.btn1 {
+  color: white;
+}
+
+.SP {
+  /* display: flex; */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.SP-New{
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f03 !important;
+}
+.new-sp-set{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .backSP {
+  color: white;
+} */
+
+.SP button {
+  font-size: 1rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#SP-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  /* top:15rem; */
+  /* width: 90rem; */
+}
+.SP1 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+}
+.angle {
+  display: block;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  float: right;
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.uptick-animation{
+  animation: uptick 0.5s forwards;
+}
+@keyframes uptick {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+}
+
+.downtick-animation{
+  animation: downtick 0.5s forwards;
+}
+@keyframes downtick {
+  from {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.SP1-options-set1 {
+  background-color: white;
+  width: 85%;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.SP1-options-set1 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.SP1-options-set2 {
+  background-color: white;
+  width: 85%;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 5px;
+  display: flex;
+}
+
+.SP1-options-set2 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.SP2 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+.SP2-options-set1 {
+  background-color: white;
+  width: 85%;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.SP2-options-set1 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.SP2-options-set2 {
+  background-color: white;
+  width: 85%;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 5px;
+  display: flex;
+}
+
+.SP2-options-set2 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}
+.SP3 {
+  margin-top: 0.5rem    ;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP4 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP5 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP6 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP7 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP8 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.SP9 {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.DP {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.btn3 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  background-color: red;
+}
+
+.TP {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.btn4 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  background-color: red;
+}
+
+.JODI {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.btn5 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: red;
+  margin-bottom: 0.5rem;
+}
+
+.HSANGAM {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.btn6 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  margin-left: 2.5rem;
+  margin-right: 1rem;
+  background-color: red;
+}
+
+.FSANGAM {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.btn7 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  background-color: red;
+}
+
+.PATTI {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.btn8 {
+  font-size: 1rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-right: 1.7rem;
+  padding-left: 1.7rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: red;
+}
