@@ -8,8 +8,8 @@ const accountSchema = new mongoose.Schema({
     unique: true,
   },
   totalAmount:{
-    type:String,
-    default: "0",
+    type:Number,
+    default: "100",
   }
 },{timeStamp:true});
 

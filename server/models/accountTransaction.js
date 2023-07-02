@@ -5,14 +5,13 @@ const accountTranSchema = new mongoose.Schema({
   userId: {
     type: objectId,
     required: true,
-    unique: true,
   },
   accountId: {
     type:objectId,
     default: 0,
   },
   amount:{
-    type:String,
+    type:Number,
     required:true
   },
   transactionType:{
@@ -22,6 +21,6 @@ const accountTranSchema = new mongoose.Schema({
   }
 },{timeStamps:true});
 
-const accountTran = mongoose.model('accountTran', accountTranSchema);
+const accountTransection = mongoose.model('accountTransection', accountTranSchema);
 
-module.exports = accountTran;
+module.exports = accountTransection;
