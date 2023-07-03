@@ -9,7 +9,7 @@ const userAccountSchema = new mongoose.Schema({
   },
   userTotalAmount:{
     type:Number,
-    default: "100",
+    default: 100,
   }
 },{timestamp:true});
 

@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema({
   },
   accountId: {
     type:objectId,
-    ref:"account"
+    ref:"userAccount"
   },
 },{timestamps: true});
 

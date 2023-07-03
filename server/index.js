@@ -5,13 +5,13 @@ app.use(express.json())
 const {default:mongoose} =require("mongoose")
 
 
-mongoose.connect("mongodb+srv://123:1234@cluster0.pf4v08v.mongodb.net/matka01",{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://123:1234@cluster0.pf4v08v.mongodb.net/matka",{useNewUrlParser:true})
 .then(()=>{console.log("mongodb is connected")})
 .catch((err)=>{console.log(err)})
 
 
-app.use("/user",require("./routs/userRouts"))
-app.use("/transection",require("./routs/transectionRouts"))
+app.use("/user",require("./routs/user"))
+app.use("/transection",require("./routs/userTransection"))
 app.get("/", (req, res) => {
   const ws = new WebSocket("wss://matka.kasoom.com:9007/matka");
 

@@ -1,5 +1,5 @@
-let userModel = require("../models/userScheema");
-let accountModel = require("../models/account")
+let userModel = require("../models/user");
+let userAccountModel = require("../models/userAccount")
 let jwt = require("jsonwebtoken");
 
 let register = async (req, res) => {
@@ -17,7 +17,7 @@ let register = async (req, res) => {
         if (!password) return res.status(400).send({ status: false, msg: "password is mandatory" })
 
         let createdUser = await userModel.create(req.body);
-       let accountCreated = await accountModel.create({ userId: createdUser._id })
+       let accountCreated = await userAccountModel.create({ userId: createdUser._id })
        
        await userModel.findOneAndUpdate({_id:createdUser._id},{accountId:accountCreated._id})
         return res.status(201).send({ status: true, message: createdUser })
@@ -41,9 +41,8 @@ const login = async (req, res) => {
         if (!password) return res.status(400).send({ status: false, msg: "name is mandatory" })
         if (!email) return res.status(400).send({ status: false, msg: "email is mandatory" })
 
-        let loginUser = await userModel.findOne({ $and: [{ email: email }, { password: password }] }).lean().populate({path:"accountId",select:{totalAmount:1,_id:0}})
+        let loginUser = await userModel.findOne({ $and: [{ email: email }, { password: password }] }).populate({path:"accountId",select:{userTotalAmount:1,_id:0}})
         if (!loginUser) return response.status(400).send({ status: false, message: "user is not found" })
-
         // let token = await jwt.sign(loginUser, "matka", { expiresIn: "24h" })
         return res.status(200).send({ loginUser })
     }

@@ -13,12 +13,12 @@ const transectionBet = async (req, res) => {
         .status(400)
         .send({ status: false, message: "user account is not exist" });
 
-    if (isUseraccount.totalAmount >= amount && transactionType == "bet") {
-      isUseraccount.totalAmount = isUseraccount.totalAmount - amount;
+    if (isUseraccount.userTotalAmount >= amount && transactionType == "bet") {
+      isUseraccount.userTotalAmount = isUseraccount.userTotalAmount - amount;
     } else {
       return res.status(400).send({
         status: false,
-        message: `you have only${account.totalAmount}`,
+        message: `you have only${isUseraccount.userTotalAmount}`,
       });
     }
     isUseraccount.save();
@@ -29,7 +29,7 @@ const transectionBet = async (req, res) => {
     return res.status(201).send({
       status: true,
       message: createdTransaction,
-      newBalance: `${isUseraccount.totalAmount}`,
+      userNewBalance: +`${isUseraccount.userTotalAmount}`,
     });
   } catch (err) {
     return res.status(500).send({ status: false, message: err.message });
@@ -51,7 +51,7 @@ const transectionWin = async (req, res) => {
         .send({ status: false, message: "user account is not exist" });
 
     if (amount > 0 && transactionType == "win") {
-      isUseraccount.totalAmount = isUseraccount.totalAmount + amount;
+      isUseraccount.userTotalAmount = isUseraccount.userTotalAmount + amount;
       isUseraccount.save();
     } else {
       return res.status(400).send({
@@ -66,7 +66,7 @@ const transectionWin = async (req, res) => {
     return res.status(201).send({
       status: true,
       message: createdTransaction,
-      newBalance: `${isUseraccount.totalAmount}`,
+      userNewBalance: `${isUseraccount.userTotalAmount}`,
     });
   } catch (err) {
     return res.status(500).send({ status: false, message: err.message });
@@ -82,7 +82,7 @@ try {
   let nowTime = new Date().getTime();
 
   const isUserTransection = await UserTransectionModel.findOne({
-    _id: UserTransectionId,
+    _id: UserTransectionId
   }).select({ __v: 0 });
 
   if (!isUserTransection)
@@ -94,7 +94,7 @@ try {
     `${isUserTransection.createdAt}`
   ).getTime();
 
-  if ((nowTime - userTransectionTime) / 1000 > 9)
+  if ((nowTime - userTransectionTime) / 1000 > 10)
     return res
       .status(400)
       .send({
@@ -114,7 +114,7 @@ try {
       isUserTransection.amount = 0;
       isUserTransection.save();
 
-      return res.send(200).send({status:true,userAccountData})
+      return res.status(200).send({status:true,userAccountData})
     }
 else {
   return res.status(400).send({status:false, message:"your Balance is 0"})

@@ -1,4 +1,4 @@
-const { register, login, update, deleteUser } = require("../controller/userController");
+const { register, login, update, deleteUser } = require("../controller/user");
 
 const router = require("express").Router();
 
