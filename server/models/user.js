@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     type:objectId,
     ref:"account"
   },
-});
+},{timestamps: true});
 
 const User = mongoose.model('User', UserSchema);
 

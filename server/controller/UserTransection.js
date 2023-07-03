@@ -1,5 +1,5 @@
 const userAccount = require("../models/userAccount");
-const accountTransectionModel = require("../models/UserTransection");
+const UserTransectionModel = require("../models/UserTransection");
 
 const transectionBet = async (req, res) => {
   try {
@@ -24,7 +24,7 @@ const transectionBet = async (req, res) => {
     isUseraccount.save();
 
     req.body.accountId = isUseraccount._id;
-    const createdTransaction = await accountTransectionModel.create(req.body);
+    const createdTransaction = await UserTransectionModel.create(req.body);
 
     return res.status(201).send({
       status: true,
@@ -38,26 +38,22 @@ const transectionBet = async (req, res) => {
 
 module.exports.transectionBet = transectionBet;
 
-
-
-
 const transectionWin = async (req, res) => {
   try {
     let { userId, amount, transactionType } = req.body;
 
     const isUseraccount = await userAccount
-    .findOne({ userId })
-    .select({ __v: 0 });
-  if (!isUseraccount)
-    return res
-      .status(400)
-      .send({ status: false, message: "user account is not exist" });
+      .findOne({ userId })
+      .select({ __v: 0 });
+    if (!isUseraccount)
+      return res
+        .status(400)
+        .send({ status: false, message: "user account is not exist" });
 
-    if (amount > 0 && transactionType == "win") {      
+    if (amount > 0 && transactionType == "win") {
       isUseraccount.totalAmount = isUseraccount.totalAmount + amount;
       isUseraccount.save();
-          }     
-    else {
+    } else {
       return res.status(400).send({
         status: false,
         message: `you have enter worng information`,
@@ -65,7 +61,7 @@ const transectionWin = async (req, res) => {
     }
 
     req.body.accountId = isUseraccount._id;
-    const createdTransaction = await accountTransectionModel.create(req.body);
+    const createdTransaction = await UserTransectionModel.create(req.body);
 
     return res.status(201).send({
       status: true,
@@ -79,9 +75,54 @@ const transectionWin = async (req, res) => {
 
 module.exports.transectionWin = transectionWin;
 
+const transectionCancel = async (req, res) => {
+try {
+  let { UserTransectionId } = req.body;
 
-const transectionCancel = async(req,res)=>{
-return "";
+  let nowTime = new Date().getTime();
+
+  const isUserTransection = await UserTransectionModel.findOne({
+    _id: UserTransectionId,
+  }).select({ __v: 0 });
+
+  if (!isUserTransection)
+    return res
+      .status(400)
+      .send({ status: false, message: "UserTransection is not exist" });
+
+  let userTransectionTime = new Date(
+    `${isUserTransection.createdAt}`
+  ).getTime();
+
+  if ((nowTime - userTransectionTime) / 1000 > 9)
+    return res
+      .status(400)
+      .send({
+        status: false,
+        message: `you have to cancel before 10 sec not ${
+          (nowTime - userTransectionTime) / 1000
+        }sec`,
+      });
+  else {
+    if (isUserTransection.amount != 0) {
+      let amountToBeAdd = isUserTransection.amount;
+      let userAccountData = await userAccount.findOne({
+        userId: isUserTransection.userId,
+      });
+      userAccountData.userTotalAmount += amountToBeAdd;
+      userAccountData.save();
+      isUserTransection.amount = 0;
+      isUserTransection.save();
+
+      return res.send(200).send({status:true,userAccountData})
+    }
+else {
+  return res.status(400).send({status:false, message:"your Balance is 0"})
 }
+  }}
+catch (error){
+  return res.status(500).send({status:false,message:error.message})
+}
+};
 
 module.exports.transectionCancel = transectionCancel;

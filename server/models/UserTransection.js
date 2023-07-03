@@ -19,7 +19,7 @@ const userTranSchema = new mongoose.Schema({
         enum :["bet","betCancel","win"],
         require:true
   }
-},{timeStamps:true});
+},{timestamps: true});
 
 const userTransection = mongoose.model('userTransection', userTranSchema);
 

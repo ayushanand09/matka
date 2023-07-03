@@ -11,7 +11,7 @@ const userAccountSchema = new mongoose.Schema({
     type:Number,
     default: "100",
   }
-},{timeStamp:true});
+},{timestamp:true});
 
 const userAccount = mongoose.model("userAccount", userAccountSchema);
 
