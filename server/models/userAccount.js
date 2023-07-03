@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 const objectId = mongoose.Schema.Types.ObjectId;
 
-const accountSchema = new mongoose.Schema({
+const userAccountSchema = new mongoose.Schema({
   userId: {
     type: objectId,
     required: true,
     unique: true,
   },
-  totalAmount:{
+  userTotalAmount:{
     type:Number,
     default: "100",
   }
 },{timeStamp:true});
 
-const account = mongoose.model('account', accountSchema);
+const userAccount = mongoose.model("userAccount", userAccountSchema);
 
-module.exports = account;
+module.exports = userAccount;

@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 const objectId = mongoose.Schema.Types.ObjectId
 
-const accountTranSchema = new mongoose.Schema({
+const userTranSchema = new mongoose.Schema({
   userId: {
     type: objectId,
     required: true,
   },
   accountId: {
     type:objectId,
-    default: 0,
-  },
+    required: true
+    },
   amount:{
     type:Number,
     required:true
@@ -17,10 +17,10 @@ const accountTranSchema = new mongoose.Schema({
   transactionType:{
         type : String,
         enum :["bet","betCancel","win"],
-    require:true
+        require:true
   }
 },{timeStamps:true});
 
-const accountTransection = mongoose.model('accountTransection', accountTranSchema);
+const userTransection = mongoose.model('userTransection', userTranSchema);
 
-module.exports = accountTransection;
+module.exports = userTransection;
