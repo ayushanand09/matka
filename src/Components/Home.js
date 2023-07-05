@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
 import "../CSS/Responsive.css";
+import {playing_card} from "../DATA/data";
 const ButtonContent = ({ content, onBack, id }) => {
   return (
     <div>
@@ -152,8 +153,15 @@ const Home = () => {
   const handleBack = () => {
     setActiveButton(null);
   };
+  const [objects, setObjects] = useState({});
   const handleClick = (id) => {
     setActiveButton(id);
+    if(id === 1){
+      console.log("hi");
+      setObjects({'type' : 'ANK'})
+      // setObjects(...objects, {"type": "ANK"})
+    }
+    console.log(objects);
   };
   
 
@@ -169,20 +177,20 @@ const Home = () => {
           <div className="buttons">
             <div className="ANK">
               <button className="ANK2">ANK</button>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
+              <button value = {1}>1</button>
+              <button value = {2}>2</button>
+              <button value = {3}>3</button>
+              <button value = {4}>4</button>
+              <button value = {5}>5</button>
               <br></br>
               <button className="backANK" onClick={handleBack}>
                 BACK
               </button>
-              <button>6</button>
-              <button>7</button>
-              <button>8</button>
-              <button>9</button>
-              <button>0</button>
+              <button value = {6}>6</button>
+              <button value = {7}>7</button>
+              <button value = {8}>8</button>
+              <button value = {9}>9</button>
+              <button value = {0}>0</button>
             </div>
           </div>
         </>
@@ -1721,19 +1729,28 @@ const Home = () => {
           <>
             <div className="tokens-outer">
               <div className="tokens">
-                <button className="token1"></button>
-                <button className="token2"></button>
-                <button className="token3"></button>
-                <button className="token4"></button>
-                <button className="token5"></button>
-                <button className="token6"></button>
-                <button className="token7"></button>
+                <button className="token1" value={1}></button>
+                <button className="token2" value={5}></button>
+                <button className="token3" value={10}></button>
+                <button className="token4" value={20}></button>
+                <button className="token5" value={50}></button>
+                <button className="token6" value={100}></button>
+                <button className="token7" value={250}></button>
               </div>
             </div>
           </>
         )}
 
         <div className="cards">
+          {playing_card.slice(0, 5).map((card) => (
+            <div key = {card.code}>
+              <div id={card.value}> <img src = {card.image} /> </div>
+              <div >{card.suit}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="cards">
           <div id="card-1">
             <img
               src={require("./Cards/card_spades_10.png")}
@@ -1809,7 +1826,9 @@ const Home = () => {
             />
             235-0
           </div>
-        </div>
+
+
+        </div> */}
         {/* <div className="time-bar-outer-container"> */}
           <div className="timer-bar-container">
             <div className={`timer-bar ${animation ? "animate" : ""}`}></div>
