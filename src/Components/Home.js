@@ -20,9 +20,6 @@ const ButtonContent = ({ content, onBack, id }) => {
 };
 
 const Home = () => {
-  const [displaySPBtns, setDisplaySPBtns] = useState(true);
-  const [hideExceptSP, setHideExceptSP] = useState(true);
-  
   
   const [showSPButtons1, setShowButtons1] = useState(false);
   const [isClicked1, setIsClicked1] = useState(false);
@@ -43,18 +40,12 @@ const Home = () => {
   const [showSPButtons9, setShowButtons9] = useState(false);
   const [isClicked9, setIsClicked9] = useState(false);
 
-  const showSPBtns = () => {
-    setDisplaySPBtns(true);
-  };
-  const hideSPBtns = () => {
-    setDisplaySPBtns(false);
-  };
 
   var click = 0;
   const handleTriggerClick1 = () => {
     console.log(click);
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked1(false);
       setShowButtons1(false);
     } else {
@@ -64,7 +55,7 @@ const Home = () => {
   };
   const handleTriggerClick2 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked2(false);
       setShowButtons2(false);
     } else {
@@ -74,7 +65,7 @@ const Home = () => {
   };
   const handleTriggerClick3 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked3(false);
       setShowButtons3(false);
     } else {
@@ -84,7 +75,7 @@ const Home = () => {
   };
   const handleTriggerClick4 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked4(false);
       setShowButtons4(false);
     } else {
@@ -94,7 +85,7 @@ const Home = () => {
   };
   const handleTriggerClick5 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked5(false);
       setShowButtons5(false);
     } else {
@@ -104,7 +95,7 @@ const Home = () => {
   };
   const handleTriggerClick6 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked6(false);
       setShowButtons6(false);
     } else {
@@ -114,7 +105,7 @@ const Home = () => {
   };
   const handleTriggerClick7 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked7(false);
       setShowButtons7(false);
     } else {
@@ -124,7 +115,7 @@ const Home = () => {
   };
   const handleTriggerClick8 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked8(false);
       setShowButtons8(false);
     } else {
@@ -134,7 +125,7 @@ const Home = () => {
   };
   const handleTriggerClick9 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked9(false);
       setShowButtons9(false);
     } else {
