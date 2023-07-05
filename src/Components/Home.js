@@ -145,18 +145,28 @@ const Home = () => {
     setActiveButton(null);
   };
   const [objects, setObjects] = useState({});
+
   const handleClick = (id) => {
     setActiveButton(id);
     if(id === 1){
-      console.log("hi");
-      setObjects({'type' : 'ANK'})
-      // setObjects(...objects, {"type": "ANK"})
+      // console.log("hi");
+      setObjects({...objects, "type": "ANK"})
     }
-    console.log(objects);
   };
   
-
-
+  const insideAnkClick = (e) => {
+    e.preventDefault();
+    let val = e.target.value;
+    console.log(val);
+    setObjects({ ...objects, 'digit': val });
+    // console.log(objects);
+  }
+  const insideBetToken = (e) => {
+    e.preventDefault();
+    let val = e.target.value;
+    console.log(val);
+    setObjects({ ...objects, 'bet': val });
+  }
   const buttons = [
     {
       name: "ANK",
@@ -168,20 +178,20 @@ const Home = () => {
           <div className="buttons">
             <div className="ANK">
               <button className="ANK2">ANK</button>
-              <button value = {1}>1</button>
-              <button value = {2}>2</button>
-              <button value = {3}>3</button>
-              <button value = {4}>4</button>
-              <button value = {5}>5</button>
+              <button value = {1} onClick={insideAnkClick}>1</button>
+              <button value = {2} onClick={insideAnkClick}>2</button>
+              <button value = {3} onClick={insideAnkClick}>3</button>
+              <button value = {4} onClick={insideAnkClick}>4</button>
+              <button value = {5} onClick={insideAnkClick}>5</button>
               <br></br>
               <button className="backANK" onClick={handleBack}>
                 BACK
               </button>
-              <button value = {6}>6</button>
-              <button value = {7}>7</button>
-              <button value = {8}>8</button>
-              <button value = {9}>9</button>
-              <button value = {0}>0</button>
+              <button value = {6} onClick={insideAnkClick}>6</button>
+              <button value = {7} onClick={insideAnkClick}>7</button>
+              <button value = {8} onClick={insideAnkClick}>8</button>
+              <button value = {9} onClick={insideAnkClick}>9</button>
+              <button value = {0} onClick={insideAnkClick}>0</button>
             </div>
           </div>
         </>
@@ -1680,6 +1690,7 @@ const Home = () => {
       clearTimeout(hideTimeout);
     };
   }, []);
+
   useEffect(() => {
     const texts = [
       { id: "txt",text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
@@ -1709,6 +1720,7 @@ const Home = () => {
 
     return () => {
       clearInterval(interval);
+      console.log(objects);
     };
   }, [timer]);
 
@@ -1720,13 +1732,13 @@ const Home = () => {
           <>
             <div className="tokens-outer">
               <div className="tokens">
-                <button className="token1" value={1}></button>
-                <button className="token2" value={5}></button>
-                <button className="token3" value={10}></button>
-                <button className="token4" value={20}></button>
-                <button className="token5" value={50}></button>
-                <button className="token6" value={100}></button>
-                <button className="token7" value={250}></button>
+                <button className="token1" onClick={insideBetToken} value={1}></button>
+                <button className="token2" onClick={insideBetToken} value={5}></button>
+                <button className="token3" onClick={insideBetToken} value={10}></button>
+                <button className="token4" onClick={insideBetToken} value={20}></button>
+                <button className="token5" onClick={insideBetToken} value={50}></button>
+                <button className="token6" onClick={insideBetToken} value={100}></button>
+                <button className="token7" onClick={insideBetToken} value={250}></button>
               </div>
             </div>
           </>
